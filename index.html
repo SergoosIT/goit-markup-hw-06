@@ -28,7 +28,7 @@
     <header class="header">
       <div class="container header-container">
         <nav class="navigation">
-          <a class="logo-link link" href="./index.html">
+          <a class="logo-link link logo-header" href="./index.html">
             <span class="logo-accent">Web</span>
             Studio
           </a>
@@ -519,8 +519,24 @@
               </a>
             </li>
           </ul>
-        </div>
-      </div>
+          </div>
+          <div class="footer-div">
+            <form class="footer-form">
+              <p class="form-subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+              <div class="footer-subscribe-div">
+                <label>
+                <input type="email" class="footer-form-input" name="user-email" placeholder="E-mail" required>
+                
+                </label>
+                <button type="submit" class="footer-form-button">Подписаться
+                  <svg class="footer-button-icon" width="24px" height="24px">
+                    <use class="use" href="./images/icon/sprite-form.svg#icon-icon-send.svg"></use>
+                  </svg>
+                </button>
+                
+                </div>
+          </div>
+          </div>
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
@@ -531,7 +547,8 @@
           </svg>
         </button>
 
-        <form action="#" class="modal-form">
+        <div class="modal-form-div">
+          <form action="#" class="modal-form">
                 <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
                 <label class="modal-form-field">
                     Имя
@@ -558,15 +575,14 @@
                 <label class="modal-form-field">
                     Почта
                     <span class="modal-form-input-wrapper">
-                        <input type="email" class="modal-form-input" name="user-email" minlength="2"
-                            required>
+                        <input type="email" class="modal-form-input" name="user-email" required>
                         <svg class="modal-form-icon" width="18px" height="18px">
                           <use href= ./images/icon/sprite-form.svg#icon-email></use>
                         </svg>
                     </span>
                 </label>
 
-                <label class="modal-form-field">
+                <label class="modal-form-field message">
                     Комментарий
                     <textarea name="user-message" class="modal-form-message" placeholder="Введите текст"></textarea>
                 </label>
@@ -576,9 +592,11 @@
                   <a href="#" class="modal-form-label-link">Условия договора</a></label>
                 <button type="submit" class="modal-form-btn">Отправить</button>
             </form>
+        </div>
 
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

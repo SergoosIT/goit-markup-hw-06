@@ -87,7 +87,7 @@ body {
   margin-left: auto;
 }
 
-.logo-link {
+.logo-header {
   margin-right: 92px;
   letter-spacing: 0.03em;
 }
@@ -226,10 +226,16 @@ a.logo-link {
   letter-spacing: 0.06em;
   color: var(--white-color);
   cursor: pointer;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.service:hover,
+.button.service:focus {
+  color: #212121;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .nav-button {
@@ -621,6 +627,9 @@ focus:focus {
 /* =======Footer======= */
 
 .section-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 60px 0px;
   background-color: #2f303a;
 }
@@ -647,7 +656,6 @@ a .adress-list {
   font-size: 14px;
   line-height: 1.7;
   color: var(--white-color);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-link.link.footer {
@@ -699,16 +707,14 @@ a .adress-list {
 
 .footer-icons {
   margin-left: 70px;
-  width: 20px;
-  height: 20px;
 }
+
 .footer-link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-item-icon:not(:last-child) {
@@ -719,7 +725,6 @@ a .adress-list {
 }
 .footer-link-icon {
   fill: var(--white-color);
-
   width: 44px;
   height: 44px;
 }
@@ -727,6 +732,80 @@ a .adress-list {
 .footer-link-icon:hover,
 .footer-link-icon:focus {
   background-color: var(--accent-color);
+}
+
+.footer-div {
+  margin-left: auto;
+}
+
+.form-subscribe {
+  padding-top: 12px;
+  margin-bottom: 20px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-form-input {
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--white-color);
+}
+
+.footer-subscribe-div {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-form-button {
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button:hover,
+.footer-form-button:focus {
+  color: var(--title-text-color);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-button-icon {
+  position: absolute;
+  width: 24px;
+  height: 26px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--white-color); */
 }
 
 /* =======End Footer======= */
@@ -774,12 +853,25 @@ a .adress-list {
   pointer-events: none;
 }
 
-/* =======Form======= */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
-.modal-form {
+/* =======Modal Form======= */
+
+.modal-form-div {
   display: flex;
   flex-direction: column;
   padding: 40px;
+  width: 528px;
+  height: 581px;
 }
 
 .modal-form-head {
@@ -804,6 +896,10 @@ a .adress-list {
   letter-spacing: 0.01em;
   color: var(--main-text-color);
   margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 0;
 }
 
 .modal-form-input-wrapper {
@@ -870,6 +966,7 @@ a .adress-list {
   display: flex;
   align-items: center;
   font-size: 12px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -912,15 +1009,4 @@ a .adress-list {
   border: 1px solid var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
 }
