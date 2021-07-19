@@ -772,6 +772,7 @@ a .adress-list {
 }
 
 .footer-form-button {
+  position: relative;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -800,13 +801,13 @@ a .adress-list {
 .footer-button-icon {
   position: absolute;
   width: 24px;
-  height: 26px;
+  height: 24px;
   padding-top: 13px;
   padding-bottom: 13px;
-  /* top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: var(--white-color); */
+  fill: var(--white-color);
 }
 
 /* =======End Footer======= */
@@ -820,9 +821,14 @@ a .adress-list {
   width: 100vw;
   height: 100vh;
   background-color: rgb(0, 0, 0, 0.2);
-
   transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
@@ -846,12 +852,6 @@ a .adress-list {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   cursor: pointer;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .visually-hidden {
@@ -984,9 +984,10 @@ a .adress-list {
   background-size: contain;
 }
 
-/* .modal-form-checkbox-label::before:hover,
-.modal-form-checkbox-label::before:focus {
-} */
+.modal-form-checkbox:hover::before,
+.modal-form-checkbox:focus::before {
+  border-color: var(--accent-color);
+}
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-color: var(--accent-color);
@@ -994,6 +995,7 @@ a .adress-list {
   background-repeat: no-repeat;
   background-size: contain;
   border: 0.2px solid var(--white-color);
+  background-origin: border-box;
 }
 
 .modal-form-btn {
