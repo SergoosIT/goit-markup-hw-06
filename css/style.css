@@ -1025,3 +1025,6 @@ a .adress-list {
   color: var(--title-text-color);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+.modal-form-label-link {
+  color: var(--accent-color);
+}
