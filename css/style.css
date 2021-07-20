@@ -772,12 +772,12 @@ a .adress-list {
 }
 
 .footer-form-button {
-  position: relative;
+  display: flex;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 200px;
-  height: 50px;
+  padding-left: 29px;
+  padding-right: 28px;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -799,14 +799,10 @@ a .adress-list {
 }
 
 .footer-button-icon {
-  position: absolute;
   width: 24px;
   height: 24px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* padding-top: 13px;
+  padding-bottom: 13px; */
   fill: var(--white-color);
 }
 
@@ -852,6 +848,10 @@ a .adress-list {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   cursor: pointer;
+}
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent-color);
 }
 
 .visually-hidden {
@@ -960,7 +960,7 @@ a .adress-list {
 }
 
 .modal-form-checkbox:focus + .modal-form-checkbox-label::before {
-  outline: none;
+  border-color: var(--accent-color);
 }
 
 .modal-form-checkbox-label {
@@ -979,23 +979,23 @@ a .adress-list {
   border-radius: 2px;
   cursor: pointer;
   margin-right: 10px;
-  background-image: url('../images/icon/border.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
+  border: 2px solid var(--title-text-color);
 }
 
 .modal-form-checkbox:hover::before,
 .modal-form-checkbox:focus::before {
   border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-color: var(--accent-color);
-  background-image: url('../images/icon/icon-check.svg');
+  background-image: url('../images/icon/check-1.svg');
   background-repeat: no-repeat;
   background-size: contain;
   border: 0.2px solid var(--white-color);
   background-origin: border-box;
+  fill: var(--white-color);
 }
 
 .modal-form-btn {
