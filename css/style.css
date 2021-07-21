@@ -802,9 +802,12 @@ a .adress-list {
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  /* padding-top: 13px;
-  padding-bottom: 13px; */
   fill: var(--white-color);
+}
+
+.footer-form-button:hover > .footer-button-icon,
+.footer-form-button:focus > .footer-button-icon {
+  fill: var(--title-text-color);
 }
 
 /* =======End Footer======= */
